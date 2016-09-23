@@ -1,0 +1,1558 @@
+{
+  "stats": {
+    "suites": 23,
+    "tests": 110,
+    "passes": 110,
+    "pending": 0,
+    "failures": 0,
+    "start": "2016-09-13T22:04:03.555Z",
+    "end": "2016-09-13T22:04:03.650Z",
+    "duration": 95
+  },
+  "tests": [
+    {
+      "title": "Post - no error",
+      "fullTitle": "builds.js Post build Post - no error",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - required field(build_id) missing error",
+      "fullTitle": "builds.js Post build Post - required field(build_id) missing error",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - error while searching dictionary",
+      "fullTitle": "builds.js Post build Post - error while searching dictionary",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - error while updating dictionary",
+      "fullTitle": "builds.js Post build Post - error while updating dictionary",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - error while searching builds",
+      "fullTitle": "builds.js Get builds Get - error while searching builds",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no error",
+      "fullTitle": "builds.js Get builds Get - no error",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Test - Readme",
+      "fullTitle": "Default.js Publish tests Test - Readme",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - no project_name",
+      "fullTitle": "Default.js Post tests Post_results - no project_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - no runtime_name",
+      "fullTitle": "Default.js Post tests Post_results - no runtime_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - no build_id",
+      "fullTitle": "Default.js Post tests Post_results - no build_id",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - no environment_name",
+      "fullTitle": "Default.js Post tests Post_results - no environment_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - invalid timestamp",
+      "fullTitle": "Default.js Post tests Post_results - invalid timestamp",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - no contents-mime",
+      "fullTitle": "Default.js Post tests Post_results - no contents-mime",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - no reports-mime",
+      "fullTitle": "Default.js Post tests Post_results - no reports-mime",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - blank timestamp",
+      "fullTitle": "Default.js Post tests Post_results - blank timestamp",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - no timestamp",
+      "fullTitle": "Default.js Post tests Post_results - no timestamp",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "update_userinfo - no runtime_name",
+      "fullTitle": "Default.js Put - update user info update_userinfo - no runtime_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "update_userinfo - no user_name",
+      "fullTitle": "Default.js Put - update user info update_userinfo - no user_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "update_userinfo - with runtime_name and code injected in user_name",
+      "fullTitle": "Default.js Put - update user info update_userinfo - with runtime_name and code injected in user_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "update_userinfo - with runtime_name and user_name",
+      "fullTitle": "Default.js Put - update user info update_userinfo - with runtime_name and user_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - no project_name",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - no project_name",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - no runtime_name",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - no runtime_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - no build_id",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - no build_id",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - no environment_name",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - no environment_name",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - invalid timestamp",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - invalid timestamp",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - invalid JSON for custom_metadata",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - invalid JSON for custom_metadata",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - no contents-mime",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - no contents-mime",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - invalid contents-mime",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - invalid contents-mime",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - invalid reports-mime",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - invalid reports-mime",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - no reports-mime",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - no reports-mime",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_results function",
+      "fullTitle": "Default.js Get Message get_results function",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_latestbuildresultsforenvironment - no environment_name provided",
+      "fullTitle": "Default.js Get Message get_latestbuildresultsforenvironment - no environment_name provided",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_latestbuildresultsforenvironment - with environment_name provided",
+      "fullTitle": "Default.js Get Message get_latestbuildresultsforenvironment - with environment_name provided",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_environment_information - no environment_name provided",
+      "fullTitle": "Default.js Get Message get_environment_information - no environment_name provided",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_environment_information - with environment_name provided",
+      "fullTitle": "Default.js Get Message get_environment_information - with environment_name provided",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_projects function - no org_name in query",
+      "fullTitle": "Default.js Get Message get_projects function - no org_name in query",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_projects function - success",
+      "fullTitle": "Default.js Get Message get_projects function - success",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_runtimes function - no org_name",
+      "fullTitle": "Default.js Get Message get_runtimes function - no org_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_runtimes function - success",
+      "fullTitle": "Default.js Get Message get_runtimes function - success",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_modules function - no org_name",
+      "fullTitle": "Default.js Get Message get_modules function - no org_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_modules function - success",
+      "fullTitle": "Default.js Get Message get_modules function - success",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_environments function - no org_name",
+      "fullTitle": "Default.js Get Message get_environments function - no org_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_environments function - success",
+      "fullTitle": "Default.js Get Message get_environments function - success",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - no error",
+      "fullTitle": "deployments.js Post deployment Post - no error",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no error",
+      "fullTitle": "deployments.js Get deployment Get - no error",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - fail to get records",
+      "fullTitle": "deployments.js Get deployment Get - fail to get records",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no records found",
+      "fullTitle": "deployments.js Get deployment Get - no records found",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no error",
+      "fullTitle": "deployments.js Get deployments Get - no error",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - fail to get records",
+      "fullTitle": "deployments.js Get deployments Get - fail to get records",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no records found",
+      "fullTitle": "deployments.js Get deployments Get - no records found",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no error",
+      "fullTitle": "deployments.js Get latest deployments Get - no error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - fail to get records",
+      "fullTitle": "deployments.js Get latest deployments Get - fail to get records",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no records found",
+      "fullTitle": "deployments.js Get latest deployments Get - no records found",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - erroneous XML content",
+      "fullTitle": "results.js Post results Post - erroneous XML content",
+      "duration": 7,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - erroneous JSON content",
+      "fullTitle": "results.js Post results Post - erroneous JSON content",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - when tool_type is unknown",
+      "fullTitle": "results.js Post results Post - when tool_type is unknown",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - error while finding dictionary record",
+      "fullTitle": "results.js Post results Post - error while finding dictionary record",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - error while updating dictionary",
+      "fullTitle": "results.js Post results Post - error while updating dictionary",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - no error",
+      "fullTitle": "results.js Post results Post - no error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Put - error while searching dictionary record",
+      "fullTitle": "results.js Update user info Put - error while searching dictionary record",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Put - dictionary record search fetched no records",
+      "fullTitle": "results.js Update user info Put - dictionary record search fetched no records",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Put - dictionary record search fetched corrupted records",
+      "fullTitle": "results.js Update user info Put - dictionary record search fetched corrupted records",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Put - dictionary record search fetched good records but update failed",
+      "fullTitle": "results.js Update user info Put - dictionary record search fetched good records but update failed",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Put - dictionary record search fetched good records and update succeeded",
+      "fullTitle": "results.js Update user info Put - dictionary record search fetched good records and update succeeded",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - error",
+      "fullTitle": "results.js Get results Get - error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no error (empty body)",
+      "fullTitle": "results.js Get results Get - no error (empty body)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no error (body with no _attachments)",
+      "fullTitle": "results.js Get results Get - no error (body with no _attachments)",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no error (body with _attachments)",
+      "fullTitle": "results.js Get results Get - no error (body with _attachments)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get latest test results - error",
+      "fullTitle": "results.js Get results Get latest test results - error",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get latest test results - no error with no dictionary docs",
+      "fullTitle": "results.js Get results Get latest test results - no error with no dictionary docs",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get latest test results - no error with dictionary docs",
+      "fullTitle": "results.js Get results Get latest test results - no error with dictionary docs",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get latest test results - no error with build results docs",
+      "fullTitle": "results.js Get results Get latest test results - no error with build results docs",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get latest test results for environment - error",
+      "fullTitle": "results.js Get results Get latest test results for environment - error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get latest test results for environments - no error with no dictionary docs",
+      "fullTitle": "results.js Get results Get latest test results for environments - no error with no dictionary docs",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get latest test results for environments - no error with dictionary docs",
+      "fullTitle": "results.js Get results Get latest test results for environments - no error with dictionary docs",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get environmentinfo - error while searching dictionaries",
+      "fullTitle": "results.js Get results Get environmentinfo - error while searching dictionaries",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get environmentinfo - no error but no dictionaries found",
+      "fullTitle": "results.js Get results Get environmentinfo - no error but no dictionaries found",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get environmentinfo - no error with dictionaries",
+      "fullTitle": "results.js Get results Get environmentinfo - no error with dictionaries",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get projects - error",
+      "fullTitle": "results.js Control-Center APIs Get projects - error",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get projects - no error",
+      "fullTitle": "results.js Control-Center APIs Get projects - no error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get modules - error",
+      "fullTitle": "results.js Control-Center APIs Get modules - error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get modules - no error",
+      "fullTitle": "results.js Control-Center APIs Get modules - no error",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get environments - error",
+      "fullTitle": "results.js Control-Center APIs Get environments - error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get environments - no error",
+      "fullTitle": "results.js Control-Center APIs Get environments - no error",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get runtimes - error",
+      "fullTitle": "results.js Control-Center APIs Get runtimes - error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get runtimes - no error (without environment in query)",
+      "fullTitle": "results.js Control-Center APIs Get runtimes - no error (without environment in query)",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get runtimes - no error (with environment in query)",
+      "fullTitle": "results.js Control-Center APIs Get runtimes - no error (with environment in query)",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For mocha",
+      "fullTitle": "utils.js FUNCTION:getToolType For mocha",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For istanbul",
+      "fullTitle": "utils.js FUNCTION:getToolType For istanbul",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For blanketjs",
+      "fullTitle": "utils.js FUNCTION:getToolType For blanketjs",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For xunit",
+      "fullTitle": "utils.js FUNCTION:getToolType For xunit",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For xunit without testsuites",
+      "fullTitle": "utils.js FUNCTION:getToolType For xunit without testsuites",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For karmamocha",
+      "fullTitle": "utils.js FUNCTION:getToolType For karmamocha",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For codescan",
+      "fullTitle": "utils.js FUNCTION:getToolType For codescan",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For codescansummary",
+      "fullTitle": "utils.js FUNCTION:getToolType For codescansummary",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For saucelabs",
+      "fullTitle": "utils.js FUNCTION:getToolType For saucelabs",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For unknown tool",
+      "fullTitle": "utils.js FUNCTION:getToolType For unknown tool",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For mocha",
+      "fullTitle": "utils.js FUNCTION:summaryResults For mocha",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For karmamocha",
+      "fullTitle": "utils.js FUNCTION:summaryResults For karmamocha",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For codescansummary - normal cases",
+      "fullTitle": "utils.js FUNCTION:summaryResults For codescansummary - normal cases",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For codescansummary - high cases",
+      "fullTitle": "utils.js FUNCTION:summaryResults For codescansummary - high cases",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For codescansummary - low cases",
+      "fullTitle": "utils.js FUNCTION:summaryResults For codescansummary - low cases",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For xunit",
+      "fullTitle": "utils.js FUNCTION:summaryResults For xunit",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For xunit without test suites",
+      "fullTitle": "utils.js FUNCTION:summaryResults For xunit without test suites",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For saucelabs",
+      "fullTitle": "utils.js FUNCTION:summaryResults For saucelabs",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For istanbul",
+      "fullTitle": "utils.js FUNCTION:summaryResults For istanbul",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For blanket",
+      "fullTitle": "utils.js FUNCTION:summaryResults For blanket",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For unknown, return should be NULL",
+      "fullTitle": "utils.js FUNCTION:summaryResults For unknown, return should be NULL",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "When no build/deploy records available",
+      "fullTitle": "utils.js FUNCTION:get_environment_information When no build/deploy records available",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "When build/deploy records are available",
+      "fullTitle": "utils.js FUNCTION:get_environment_information When build/deploy records are available",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "Post - no error",
+      "fullTitle": "builds.js Post build Post - no error",
+      "duration": 4,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - required field(build_id) missing error",
+      "fullTitle": "builds.js Post build Post - required field(build_id) missing error",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - error while searching dictionary",
+      "fullTitle": "builds.js Post build Post - error while searching dictionary",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - error while updating dictionary",
+      "fullTitle": "builds.js Post build Post - error while updating dictionary",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - error while searching builds",
+      "fullTitle": "builds.js Get builds Get - error while searching builds",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no error",
+      "fullTitle": "builds.js Get builds Get - no error",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Test - Readme",
+      "fullTitle": "Default.js Publish tests Test - Readme",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - no project_name",
+      "fullTitle": "Default.js Post tests Post_results - no project_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - no runtime_name",
+      "fullTitle": "Default.js Post tests Post_results - no runtime_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - no build_id",
+      "fullTitle": "Default.js Post tests Post_results - no build_id",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - no environment_name",
+      "fullTitle": "Default.js Post tests Post_results - no environment_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - invalid timestamp",
+      "fullTitle": "Default.js Post tests Post_results - invalid timestamp",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - no contents-mime",
+      "fullTitle": "Default.js Post tests Post_results - no contents-mime",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - no reports-mime",
+      "fullTitle": "Default.js Post tests Post_results - no reports-mime",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - blank timestamp",
+      "fullTitle": "Default.js Post tests Post_results - blank timestamp",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post_results - no timestamp",
+      "fullTitle": "Default.js Post tests Post_results - no timestamp",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "update_userinfo - no runtime_name",
+      "fullTitle": "Default.js Put - update user info update_userinfo - no runtime_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "update_userinfo - no user_name",
+      "fullTitle": "Default.js Put - update user info update_userinfo - no user_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "update_userinfo - with runtime_name and code injected in user_name",
+      "fullTitle": "Default.js Put - update user info update_userinfo - with runtime_name and code injected in user_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "update_userinfo - with runtime_name and user_name",
+      "fullTitle": "Default.js Put - update user info update_userinfo - with runtime_name and user_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - no project_name",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - no project_name",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - no runtime_name",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - no runtime_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - no build_id",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - no build_id",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - no environment_name",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - no environment_name",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - invalid timestamp",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - invalid timestamp",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - invalid JSON for custom_metadata",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - invalid JSON for custom_metadata",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - no contents-mime",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - no contents-mime",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - invalid contents-mime",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - invalid contents-mime",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - invalid reports-mime",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - invalid reports-mime",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "results_multipart - no reports-mime",
+      "fullTitle": "Default.js Post tests - multipart results_multipart - no reports-mime",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_results function",
+      "fullTitle": "Default.js Get Message get_results function",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_latestbuildresultsforenvironment - no environment_name provided",
+      "fullTitle": "Default.js Get Message get_latestbuildresultsforenvironment - no environment_name provided",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_latestbuildresultsforenvironment - with environment_name provided",
+      "fullTitle": "Default.js Get Message get_latestbuildresultsforenvironment - with environment_name provided",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_environment_information - no environment_name provided",
+      "fullTitle": "Default.js Get Message get_environment_information - no environment_name provided",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_environment_information - with environment_name provided",
+      "fullTitle": "Default.js Get Message get_environment_information - with environment_name provided",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_projects function - no org_name in query",
+      "fullTitle": "Default.js Get Message get_projects function - no org_name in query",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_projects function - success",
+      "fullTitle": "Default.js Get Message get_projects function - success",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_runtimes function - no org_name",
+      "fullTitle": "Default.js Get Message get_runtimes function - no org_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_runtimes function - success",
+      "fullTitle": "Default.js Get Message get_runtimes function - success",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_modules function - no org_name",
+      "fullTitle": "Default.js Get Message get_modules function - no org_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_modules function - success",
+      "fullTitle": "Default.js Get Message get_modules function - success",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_environments function - no org_name",
+      "fullTitle": "Default.js Get Message get_environments function - no org_name",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "get_environments function - success",
+      "fullTitle": "Default.js Get Message get_environments function - success",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - no error",
+      "fullTitle": "deployments.js Post deployment Post - no error",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no error",
+      "fullTitle": "deployments.js Get deployment Get - no error",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - fail to get records",
+      "fullTitle": "deployments.js Get deployment Get - fail to get records",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no records found",
+      "fullTitle": "deployments.js Get deployment Get - no records found",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no error",
+      "fullTitle": "deployments.js Get deployments Get - no error",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - fail to get records",
+      "fullTitle": "deployments.js Get deployments Get - fail to get records",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no records found",
+      "fullTitle": "deployments.js Get deployments Get - no records found",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no error",
+      "fullTitle": "deployments.js Get latest deployments Get - no error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - fail to get records",
+      "fullTitle": "deployments.js Get latest deployments Get - fail to get records",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no records found",
+      "fullTitle": "deployments.js Get latest deployments Get - no records found",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - erroneous XML content",
+      "fullTitle": "results.js Post results Post - erroneous XML content",
+      "duration": 7,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - erroneous JSON content",
+      "fullTitle": "results.js Post results Post - erroneous JSON content",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - when tool_type is unknown",
+      "fullTitle": "results.js Post results Post - when tool_type is unknown",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - error while finding dictionary record",
+      "fullTitle": "results.js Post results Post - error while finding dictionary record",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - error while updating dictionary",
+      "fullTitle": "results.js Post results Post - error while updating dictionary",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Post - no error",
+      "fullTitle": "results.js Post results Post - no error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Put - error while searching dictionary record",
+      "fullTitle": "results.js Update user info Put - error while searching dictionary record",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Put - dictionary record search fetched no records",
+      "fullTitle": "results.js Update user info Put - dictionary record search fetched no records",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Put - dictionary record search fetched corrupted records",
+      "fullTitle": "results.js Update user info Put - dictionary record search fetched corrupted records",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Put - dictionary record search fetched good records but update failed",
+      "fullTitle": "results.js Update user info Put - dictionary record search fetched good records but update failed",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Put - dictionary record search fetched good records and update succeeded",
+      "fullTitle": "results.js Update user info Put - dictionary record search fetched good records and update succeeded",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - error",
+      "fullTitle": "results.js Get results Get - error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no error (empty body)",
+      "fullTitle": "results.js Get results Get - no error (empty body)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no error (body with no _attachments)",
+      "fullTitle": "results.js Get results Get - no error (body with no _attachments)",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get - no error (body with _attachments)",
+      "fullTitle": "results.js Get results Get - no error (body with _attachments)",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get latest test results - error",
+      "fullTitle": "results.js Get results Get latest test results - error",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get latest test results - no error with no dictionary docs",
+      "fullTitle": "results.js Get results Get latest test results - no error with no dictionary docs",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get latest test results - no error with dictionary docs",
+      "fullTitle": "results.js Get results Get latest test results - no error with dictionary docs",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get latest test results - no error with build results docs",
+      "fullTitle": "results.js Get results Get latest test results - no error with build results docs",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get latest test results for environment - error",
+      "fullTitle": "results.js Get results Get latest test results for environment - error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get latest test results for environments - no error with no dictionary docs",
+      "fullTitle": "results.js Get results Get latest test results for environments - no error with no dictionary docs",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get latest test results for environments - no error with dictionary docs",
+      "fullTitle": "results.js Get results Get latest test results for environments - no error with dictionary docs",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get environmentinfo - error while searching dictionaries",
+      "fullTitle": "results.js Get results Get environmentinfo - error while searching dictionaries",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get environmentinfo - no error but no dictionaries found",
+      "fullTitle": "results.js Get results Get environmentinfo - no error but no dictionaries found",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get environmentinfo - no error with dictionaries",
+      "fullTitle": "results.js Get results Get environmentinfo - no error with dictionaries",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get projects - error",
+      "fullTitle": "results.js Control-Center APIs Get projects - error",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get projects - no error",
+      "fullTitle": "results.js Control-Center APIs Get projects - no error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get modules - error",
+      "fullTitle": "results.js Control-Center APIs Get modules - error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get modules - no error",
+      "fullTitle": "results.js Control-Center APIs Get modules - no error",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get environments - error",
+      "fullTitle": "results.js Control-Center APIs Get environments - error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get environments - no error",
+      "fullTitle": "results.js Control-Center APIs Get environments - no error",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get runtimes - error",
+      "fullTitle": "results.js Control-Center APIs Get runtimes - error",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get runtimes - no error (without environment in query)",
+      "fullTitle": "results.js Control-Center APIs Get runtimes - no error (without environment in query)",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "Get runtimes - no error (with environment in query)",
+      "fullTitle": "results.js Control-Center APIs Get runtimes - no error (with environment in query)",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For mocha",
+      "fullTitle": "utils.js FUNCTION:getToolType For mocha",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For istanbul",
+      "fullTitle": "utils.js FUNCTION:getToolType For istanbul",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For blanketjs",
+      "fullTitle": "utils.js FUNCTION:getToolType For blanketjs",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For xunit",
+      "fullTitle": "utils.js FUNCTION:getToolType For xunit",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For xunit without testsuites",
+      "fullTitle": "utils.js FUNCTION:getToolType For xunit without testsuites",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For karmamocha",
+      "fullTitle": "utils.js FUNCTION:getToolType For karmamocha",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For codescan",
+      "fullTitle": "utils.js FUNCTION:getToolType For codescan",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For codescansummary",
+      "fullTitle": "utils.js FUNCTION:getToolType For codescansummary",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For saucelabs",
+      "fullTitle": "utils.js FUNCTION:getToolType For saucelabs",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For unknown tool",
+      "fullTitle": "utils.js FUNCTION:getToolType For unknown tool",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For mocha",
+      "fullTitle": "utils.js FUNCTION:summaryResults For mocha",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For karmamocha",
+      "fullTitle": "utils.js FUNCTION:summaryResults For karmamocha",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For codescansummary - normal cases",
+      "fullTitle": "utils.js FUNCTION:summaryResults For codescansummary - normal cases",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For codescansummary - high cases",
+      "fullTitle": "utils.js FUNCTION:summaryResults For codescansummary - high cases",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For codescansummary - low cases",
+      "fullTitle": "utils.js FUNCTION:summaryResults For codescansummary - low cases",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For xunit",
+      "fullTitle": "utils.js FUNCTION:summaryResults For xunit",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For xunit without test suites",
+      "fullTitle": "utils.js FUNCTION:summaryResults For xunit without test suites",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For saucelabs",
+      "fullTitle": "utils.js FUNCTION:summaryResults For saucelabs",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For istanbul",
+      "fullTitle": "utils.js FUNCTION:summaryResults For istanbul",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For blanket",
+      "fullTitle": "utils.js FUNCTION:summaryResults For blanket",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "For unknown, return should be NULL",
+      "fullTitle": "utils.js FUNCTION:summaryResults For unknown, return should be NULL",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "When no build/deploy records available",
+      "fullTitle": "utils.js FUNCTION:get_environment_information When no build/deploy records available",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "When build/deploy records are available",
+      "fullTitle": "utils.js FUNCTION:get_environment_information When build/deploy records are available",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}
