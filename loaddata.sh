@@ -272,10 +272,6 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
 
 exit 1;
 
-
-
-
-
 sleep 5s
 echo '\nPosting unit-test results ...'
 # test result - mocha
