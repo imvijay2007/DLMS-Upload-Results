@@ -1,8 +1,8 @@
-TOKEN='bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhOWUwY2ViNC1jMzA3LTQ4ZGUtYmFlMS04N2U5NjlhZjY2YWYiLCJzdWIiOiI0MjcxMTA1ZS00OWJjLTRkN2QtYThkMS0zNjRhYzk1OTVkOGMiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiLCJvcGVuaWQiXSwiY2xpZW50X2lkIjoiY2YiLCJjaWQiOiJjZiIsImF6cCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjQyNzExMDVlLTQ5YmMtNGQ3ZC1hOGQxLTM2NGFjOTU5NWQ4YyIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6InZqZWdhc2VAdXMuaWJtLmNvbSIsImVtYWlsIjoidmplZ2FzZUB1cy5pYm0uY29tIiwicmV2X3NpZyI6ImUzZWVjZWY4IiwiaWF0IjoxNDc0OTI5NjkyLCJleHAiOjE0NzYxMzkyOTIsImlzcyI6Imh0dHBzOi8vdWFhLnN0YWdlMS5uZy5ibHVlbWl4Lm5ldC9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiLCJjZiIsIm9wZW5pZCJdfQ.a7107YJQzNq4qZOYV_IPu7ax-YGVP2i36IMsXL5nGDU'
+TOKEN='bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIyNzdjNWE2ZC0zOWU0LTQ2MzUtYmM3MC02NGYwNjVlNzcyNzYiLCJzdWIiOiI0MjcxMTA1ZS00OWJjLTRkN2QtYThkMS0zNjRhYzk1OTVkOGMiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiLCJvcGVuaWQiXSwiY2xpZW50X2lkIjoiY2YiLCJjaWQiOiJjZiIsImF6cCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjQyNzExMDVlLTQ5YmMtNGQ3ZC1hOGQxLTM2NGFjOTU5NWQ4YyIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6InZqZWdhc2VAdXMuaWJtLmNvbSIsImVtYWlsIjoidmplZ2FzZUB1cy5pYm0uY29tIiwicmV2X3NpZyI6ImUzZWVjZWY4IiwiaWF0IjoxNDc1MDg5NTEyLCJleHAiOjE0NzYyOTkxMTIsImlzcyI6Imh0dHBzOi8vdWFhLnN0YWdlMS5uZy5ibHVlbWl4Lm5ldC9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiLCJjZiIsIm9wZW5pZCJdfQ.lkCWfvzq_mKyW2cpHZNJhKm98tl4VXEnUDjqfp1wajQ'
 
 ORG=bair@us.ibm.com
 ENVIRONMENT=MASTER_BUILD
-RUNTIME='Catalog_API'
+RUNTIME='Flex_API'
 BUILD_ID=master:30
 COMMIT_ID=7035df304135d746c71e92edaea9bd1fc8525644
 JOB_URL='https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/38218d83-89ff-465b-bf40-de51a5286c6c/ce2c975f-7581-45c5-9ae8-5573b1fd99fe'
@@ -73,7 +73,7 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
 
 #sleep 1s 
 
-RUNTIME='Catalog_UI'
+RUNTIME='Flex_UI'
 BUILD_ID=master:21
 
 echo "\nPosting build information for $RUNTIME and $BRANCH and $BUILD_ID."
@@ -138,7 +138,7 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
 # Posting for different branch
 #sleep 1s 
 
-RUNTIME='Catalog_API'
+RUNTIME='Flex_API'
 BRANCH=release
 BUILD_ID=release:10
 ENVIRONMENT=RELEASE_BUILD
@@ -206,7 +206,7 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
 
 #sleep 1s 
 
-RUNTIME='Catalog_UI'
+RUNTIME='Flex_UI'
 BUILD_ID=release:5
 
 echo "\nPosting build information for $RUNTIME and $BRANCH and $BUILD_ID."
