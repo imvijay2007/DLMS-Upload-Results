@@ -1,13 +1,13 @@
-TOKEN='bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhOWUwY2ViNC1jMzA3LTQ4ZGUtYmFlMS04N2U5NjlhZjY2YWYiLCJzdWIiOiI0MjcxMTA1ZS00OWJjLTRkN2QtYThkMS0zNjRhYzk1OTVkOGMiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiLCJvcGVuaWQiXSwiY2xpZW50X2lkIjoiY2YiLCJjaWQiOiJjZiIsImF6cCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjQyNzExMDVlLTQ5YmMtNGQ3ZC1hOGQxLTM2NGFjOTU5NWQ4YyIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6InZqZWdhc2VAdXMuaWJtLmNvbSIsImVtYWlsIjoidmplZ2FzZUB1cy5pYm0uY29tIiwicmV2X3NpZyI6ImUzZWVjZWY4IiwiaWF0IjoxNDc0OTI5NjkyLCJleHAiOjE0NzYxMzkyOTIsImlzcyI6Imh0dHBzOi8vdWFhLnN0YWdlMS5uZy5ibHVlbWl4Lm5ldC9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiLCJjZiIsIm9wZW5pZCJdfQ.a7107YJQzNq4qZOYV_IPu7ax-YGVP2i36IMsXL5nGDU'
+TOKEN='bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJlNTUzZjMyNS1iYjAwLTRjYzQtYTM3ZS1kZmYwYTEyYjY4NDQiLCJzdWIiOiI0MjcxMTA1ZS00OWJjLTRkN2QtYThkMS0zNjRhYzk1OTVkOGMiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiLCJvcGVuaWQiLCJ1YWEudXNlciJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiYXpwIjoiY2YiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiNDI3MTEwNWUtNDliYy00ZDdkLWE4ZDEtMzY0YWM5NTk1ZDhjIiwib3JpZ2luIjoidWFhIiwidXNlcl9uYW1lIjoidmplZ2FzZUB1cy5pYm0uY29tIiwiZW1haWwiOiJ2amVnYXNlQHVzLmlibS5jb20iLCJyZXZfc2lnIjoiZTNlZWNlZjgiLCJpYXQiOjE0NzY2NTc5ODYsImV4cCI6MTQ3Nzg2NzU4NiwiaXNzIjoiaHR0cHM6Ly91YWEuc3RhZ2UxLm5nLmJsdWVtaXgubmV0L29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCIsImNmIiwidWFhIiwib3BlbmlkIl19.0XrtmMJllh_0doFjl5wsQ96DxdCVx8IXdNIoSjmadrk'
 
-ORG=bair@us.ibm.com
+ORG=vjegase@us.ibm.com
 ENVIRONMENT=MASTER_BUILD
 RUNTIME='Catalog_API'
 BUILD_ID=master:30
 COMMIT_ID=7035df304135d746c71e92edaea9bd1fc8525644
 JOB_URL='https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/38218d83-89ff-465b-bf40-de51a5286c6c/ce2c975f-7581-45c5-9ae8-5573b1fd99fe'
 BRANCH=master
-DLMS_SERVER=http://localhost:6009
+DLMS_SERVER=https://dev-dlms.stage1.ng.bluemix.net
 
 echo "\nPosting build information for $RUNTIME and $BRANCH and $BUILD_ID."
 
@@ -40,7 +40,7 @@ DEPLOY_ENVIRONMENT=STAGING
 echo '\nPosting deploy information...'
 # deploy record
 curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '{
-    "app_url": "https://new-dlms.stage1.ng.bluemix.net/docs",
+    "app_url": "https://dlms.ng.bluemix.net/docs",
     "job_url": "https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/7f388114-b91e-405d-a486-5e89105fffea/1d5b23d7-9926-47df-b066-3e73fa82071c",
     "status": "pass",
     "custom_metadata": {
@@ -51,6 +51,10 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
 echo '\nPosting fvt(saucelabs) results ...'
 # test result - saucelabs
 curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=fvt -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=saucelab-test.json -F contents_type=application/json -F contents=@saucelab-test.json "$DLMS_SERVER/v1/results_multipart"
+
+echo '\nPosting scan(appscan) results ...'
+# test result - scan
+curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=codescansummary -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=codescansumamry-test.json -F contents_type=application/json -F contents=@codescansumamry-test-stage.json "$DLMS_SERVER/v1/results_multipart"
 
 
 #sleep 1s
@@ -86,7 +90,7 @@ curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/
 echo '\nPosting deploy information...'
 # deploy record
 curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '{
-    "app_url": "https://new-dlms.stage1.ng.bluemix.net/docs",
+    "app_url": "https://dlms.ng.bluemix.net/docs",
     "job_url": "https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/7f388114-b91e-405d-a486-5e89105fffea/1d5b23d7-9926-47df-b066-3e73fa82071c",
     "status": "pass",
     "custom_metadata": {
@@ -97,6 +101,10 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
 echo '\nPosting fvt(saucelabs) results ...'
 # test result - saucelabs
 curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=fvt -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=saucelab-test.json -F contents_type=application/json -F contents=@saucelab-test.json "$DLMS_SERVER/v1/results_multipart"
+
+echo '\nPosting scan(appscan) results ...'
+# test result - scan
+curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=codescansummary -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=codescansumamry-test.json -F contents_type=application/json -F contents=@codescansumamry-test-stage.json "$DLMS_SERVER/v1/results_multipart"
 
 
 #sleep 1s 
@@ -132,7 +140,7 @@ curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/
 echo '\nPosting deploy information...'
 # deploy record
 curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '{
-    "app_url": "https://new-dlms.stage1.ng.bluemix.net/docs",
+    "app_url": "https://dlms.ng.bluemix.net/docs",
     "job_url": "https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/7f388114-b91e-405d-a486-5e89105fffea/1d5b23d7-9926-47df-b066-3e73fa82071c",
     "status": "pass",
     "custom_metadata": {
@@ -143,6 +151,10 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
 echo '\nPosting fvt(saucelabs) results ...'
 # test result - saucelabs
 curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=fvt -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=saucelab-test.json -F contents_type=application/json -F contents=@saucelab-test.json "$DLMS_SERVER/v1/results_multipart"
+
+echo '\nPosting scan(appscan) results ...'
+# test result - scan
+curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=codescansummary -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=codescansumamry-test.json -F contents_type=application/json -F contents=@codescansumamry-test-stage.json "$DLMS_SERVER/v1/results_multipart"
 
 
 #sleep 1s 
@@ -178,7 +190,7 @@ curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/
 echo '\nPosting deploy information...'
 # deploy record
 curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '{
-    "app_url": "https://new-dlms.stage1.ng.bluemix.net/docs",
+    "app_url": "https://dlms.ng.bluemix.net/docs",
     "job_url": "https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/7f388114-b91e-405d-a486-5e89105fffea/1d5b23d7-9926-47df-b066-3e73fa82071c",
     "status": "pass",
     "custom_metadata": {
@@ -189,6 +201,10 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
 echo '\nPosting fvt(saucelabs) results ...'
 # test result - saucelabs
 curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=fvt -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=saucelab-test.json -F contents_type=application/json -F contents=@saucelab-test.json "$DLMS_SERVER/v1/results_multipart"
+
+echo '\nPosting scan(appscan) results ...'
+# test result - scan
+curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=codescansummary -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=codescansumamry-test.json -F contents_type=application/json -F contents=@codescansumamry-test-stage.json "$DLMS_SERVER/v1/results_multipart"
 
 
 # Posting for different branch
@@ -229,7 +245,7 @@ DEPLOY_ENVIRONMENT=PRODUCTION
 echo '\nPosting deploy information...'
 # deploy record
 curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '{
-    "app_url": "https://new-dlms.stage1.ng.bluemix.net/docs",
+    "app_url": "https://dlms.ng.bluemix.net/docs",
     "job_url": "https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/7f388114-b91e-405d-a486-5e89105fffea/1d5b23d7-9926-47df-b066-3e73fa82071c",
     "status": "pass",
     "custom_metadata": {
@@ -240,6 +256,10 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
 echo '\nPosting fvt(saucelabs) results ...'
 # test result - saucelabs
 curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=fvt -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=saucelab-test.json -F contents_type=application/json -F contents=@saucelab-test.json "$DLMS_SERVER/v1/results_multipart"
+
+echo '\nPosting scan(appscan) results ...'
+# test result - scan
+curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=codescansummary -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=codescansumamry-test.json -F contents_type=application/json -F contents=@codescansumamry-test-prod.json "$DLMS_SERVER/v1/results_multipart"
 
 
 #sleep 1s 
@@ -275,7 +295,7 @@ curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/
 echo '\nPosting deploy information...'
 # deploy record
 curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '{
-    "app_url": "https://new-dlms.stage1.ng.bluemix.net/docs",
+    "app_url": "https://dlms.ng.bluemix.net/docs",
     "job_url": "https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/7f388114-b91e-405d-a486-5e89105fffea/1d5b23d7-9926-47df-b066-3e73fa82071c",
     "status": "pass",
     "custom_metadata": {
@@ -286,6 +306,10 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
 echo '\nPosting fvt(saucelabs) results ...'
 # test result - saucelabs
 curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=fvt -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=saucelab-test.json -F contents_type=application/json -F contents=@saucelab-test.json "$DLMS_SERVER/v1/results_multipart"
+
+echo '\nPosting scan(appscan) results ...'
+# test result - scan
+curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=codescansummary -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=codescansumamry-test.json -F contents_type=application/json -F contents=@codescansumamry-test-prod.json "$DLMS_SERVER/v1/results_multipart"
 
 
 #sleep 1s 
@@ -321,7 +345,7 @@ curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/
 echo '\nPosting deploy information...'
 # deploy record
 curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '{
-    "app_url": "https://new-dlms.stage1.ng.bluemix.net/docs",
+    "app_url": "https://dlms.ng.bluemix.net/docs",
     "job_url": "https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/7f388114-b91e-405d-a486-5e89105fffea/1d5b23d7-9926-47df-b066-3e73fa82071c",
     "status": "pass",
     "custom_metadata": {
@@ -332,6 +356,10 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
 echo '\nPosting fvt(saucelabs) results ...'
 # test result - saucelabs
 curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=fvt -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=saucelab-test.json -F contents_type=application/json -F contents=@saucelab-test.json "$DLMS_SERVER/v1/results_multipart"
+
+echo '\nPosting scan(appscan) results ...'
+# test result - scan
+curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=codescansummary -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=codescansumamry-test.json -F contents_type=application/json -F contents=@codescansumamry-test-prod.json "$DLMS_SERVER/v1/results_multipart"
 
 
 #sleep 1s 
@@ -367,7 +395,7 @@ curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/
 echo '\nPosting deploy information...'
 # deploy record
 curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '{
-    "app_url": "https://new-dlms.stage1.ng.bluemix.net/docs",
+    "app_url": "https://dlms.ng.bluemix.net/docs",
     "job_url": "https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/7f388114-b91e-405d-a486-5e89105fffea/1d5b23d7-9926-47df-b066-3e73fa82071c",
     "status": "pass",
     "custom_metadata": {
@@ -378,6 +406,10 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
 echo '\nPosting fvt(saucelabs) results ...'
 # test result - saucelabs
 curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=fvt -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=saucelab-test.json -F contents_type=application/json -F contents=@saucelab-test.json "$DLMS_SERVER/v1/results_multipart"
+
+echo '\nPosting scan(appscan) results ...'
+# test result - scan
+curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/form-data" -F org_name=$ORG -F project_name=$RUNTIME -F runtime_name=$RUNTIME -F build_id=$BUILD_ID -F environment_name=$DEPLOY_ENVIRONMENT -F lifecycle_stage=codescansummary -F module_name=$RUNTIME -F url=https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/e4a5b9d7-dc0c-4925-8335-85bea17c717d/696d3338-ac7f-44d3-ab6f-e56251c5cb0e,https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/8cb8a343-68b7-4f4b-8810-a12ded2a8c96/aa6b944f-de84-47f9-83e5-3f4a72d62458 -F artifact_name=codescansumamry-test.json -F contents_type=application/json -F contents=@codescansumamry-test-prod.json "$DLMS_SERVER/v1/results_multipart"
 
 
 # Posting for different branch - end
@@ -407,7 +439,7 @@ sleep 5s
 echo '\nPosting deploy information...'
 # deploy record
 curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '{
-    "app_url": "https://new-dlms.stage1.ng.bluemix.net/docs",
+    "app_url": "https://dlms.ng.bluemix.net/docs",
     "job_url": "https://hub.jazz.net/pipeline/devopsanalytics/DLMS-ci/7f388114-b91e-405d-a486-5e89105fffea/1d5b23d7-9926-47df-b066-3e73fa82071c",
     "status": "pass",
     "custom_metadata": {
