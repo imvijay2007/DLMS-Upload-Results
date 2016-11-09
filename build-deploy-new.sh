@@ -117,3 +117,5 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
         "toolchain_id": "5-4257-a110-87bc3cd234"
     }
 }' "$DLMS_SERVER/v1/orgs/$ORGANIZATION/envs/$DEPLOY_ENVIRONMENT/runtimes/$RUNTIME/builds/$BUILD_ID/deployments"
+
+sh print-message.sh
