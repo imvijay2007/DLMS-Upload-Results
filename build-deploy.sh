@@ -69,3 +69,16 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
 }' "$DLMS_SERVER/v1/orgs/$ORGANIZATION/envs/$DEPLOY_ENVIRONMENT/runtimes/$RUNTIME/builds/$BUILD_ID/deployments"
 
 sh print-message.sh
+echo "VERIFY:"
+echo "Build page: When the branch is selected, following needs to be visible with data -"
+echo "- a runtime entry with owner"
+echo "- latest build information: build id, status of build(icon)and build date"
+echo "- last reported build information: build id and build date"
+echo "- Tests should should be empty('--')."
+echo "- Coverage columns should be empty('--')."
+echo "Deploy page: When the deploy environment is selected, following needs to be visible with data -"
+echo "- a runtime entry"
+echo "- deployed build information: deployed build id, status of deployment(icon), and date when build for deployment happened."
+echo "- last reported build information: build id and build date"
+echo "- Tests should should be empty('--')."
+echo "---------------------------------------------------------------------------------------------------------"

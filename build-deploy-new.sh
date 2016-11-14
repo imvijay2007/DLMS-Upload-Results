@@ -88,7 +88,7 @@ curl -X POST --header "Authorization: $TOKEN" --header "Content-Type: multipart/
 echo '\n######SLEEP 1 MINUTE######'
 sleep 70s
 
-BUILD_ID=master:31
+BUILD_ID=master:newerbuild
 COMMIT_ID=dff7884b9168168d91cb9e5aec78e93db0fa80d8
 
 echo "\nPosting build information for $RUNTIME and $BRANCH and $BUILD_ID."
@@ -119,3 +119,15 @@ curl -X POST -H "Authorization: $TOKEN" -H "Content-Type: application/json" -d '
 }' "$DLMS_SERVER/v1/orgs/$ORGANIZATION/envs/$DEPLOY_ENVIRONMENT/runtimes/$RUNTIME/builds/$BUILD_ID/deployments"
 
 sh print-message.sh
+echo "VERIFY:"
+echo "Build page: When the branch is selected, following needs to be visible with data -"
+echo "- a runtime entry with owner"
+echo "- latest build information: build id, status of build(icon)and build date"
+echo "- last reported build information: build id and build date"
+echo "- the latest build date is more recent than last reported build date"
+echo "- Unit test results and code coverages of previous builds are available."
+echo "Deploy page: When the deploy environment is selected, following needs to be visible with data -"
+echo "- a runtime entry"
+echo "- ndeployed build information: newly deployed build id, status of deployment(icon), and date when build for deployment happened."
+echo "- NOTE: FVT results of previous builds should not show up here."
+echo "---------------------------------------------------------------------------------------------------------"
