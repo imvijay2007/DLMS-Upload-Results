@@ -89,4 +89,4 @@ sh print-message.sh
 echo "VERIFY:"
 echo "Build page: When the branch is selected, 2 runtime rows should be visible along with their test results."
 echo "Deploy page: Should be empty."
-echo "---------------------------------------------------------------------------------------------------------"
+echo "--------------------------------------------------------------------------------------------------"
