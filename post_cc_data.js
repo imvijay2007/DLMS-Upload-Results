@@ -3,13 +3,13 @@ var async = require('async');
 var uuid = require('node-uuid');
 var url = 'http://localhost:6009/v1/results';
 
-var accessToken = 'bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0ZjhhYjIxOS0xMzRmLTQwOGItYmE5Yi00ODJhNDRjZWVlMTAiLCJzdWIiOiI0MjcxMTA1ZS00OWJjLTRkN2QtYThkMS0zNjRhYzk1OTVkOGMiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiLCJvcGVuaWQiXSwiY2xpZW50X2lkIjoiY2YiLCJjaWQiOiJjZiIsImF6cCI6ImNmIiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjQyNzExMDVlLTQ5YmMtNGQ3ZC1hOGQxLTM2NGFjOTU5NWQ4YyIsIm9yaWdpbiI6InVhYSIsInVzZXJfbmFtZSI6InZqZWdhc2VAdXMuaWJtLmNvbSIsImVtYWlsIjoidmplZ2FzZUB1cy5pYm0uY29tIiwicmV2X3NpZyI6ImUzZWVjZWY4IiwiaWF0IjoxNDc2MTk3OTc5LCJleHAiOjE0Nzc0MDc1NzksImlzcyI6Imh0dHBzOi8vdWFhLnN0YWdlMS5uZy5ibHVlbWl4Lm5ldC9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiLCJjZiIsIm9wZW5pZCJdfQ.7QPt37T2xODocYKj6PhyrpNtm32Lx-p8-SdSGywqr5M';
+var accessToken = 'bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzZDQxMzBjNi03YmUwLTQ2MTQtODVhNy1iZGFjZWE5MGY1NmUiLCJzdWIiOiI0MjcxMTA1ZS00OWJjLTRkN2QtYThkMS0zNjRhYzk1OTVkOGMiLCJzY29wZSI6WyJjbG91ZF9jb250cm9sbGVyLnJlYWQiLCJwYXNzd29yZC53cml0ZSIsImNsb3VkX2NvbnRyb2xsZXIud3JpdGUiLCJvcGVuaWQiLCJ1YWEudXNlciJdLCJjbGllbnRfaWQiOiJjZiIsImNpZCI6ImNmIiwiYXpwIjoiY2YiLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiNDI3MTEwNWUtNDliYy00ZDdkLWE4ZDEtMzY0YWM5NTk1ZDhjIiwib3JpZ2luIjoidWFhIiwidXNlcl9uYW1lIjoidmplZ2FzZUB1cy5pYm0uY29tIiwiZW1haWwiOiJ2amVnYXNlQHVzLmlibS5jb20iLCJyZXZfc2lnIjoiZTNlZWNlZjgiLCJpYXQiOjE0ODAzNDc2NjIsImV4cCI6MTQ4MTU1NzI2MiwiaXNzIjoiaHR0cHM6Ly91YWEuc3RhZ2UxLm5nLmJsdWVtaXgubmV0L29hdXRoL3Rva2VuIiwiemlkIjoidWFhIiwiYXVkIjpbImNsb3VkX2NvbnRyb2xsZXIiLCJwYXNzd29yZCIsImNmIiwidWFhIiwib3BlbmlkIl19.zkZGhHQWPYmsqApG9ZA5ZlT1vTRnl1-eqv4CWQHqU_k';
 
 var d = new Date();
 var isotime = d.toJSON();
 
 var builds = [];
-for (var i = 15; i >= 0; i--) {
+for (var i = 29; i >= 0; i--) {
     builds.push(i);
 }
 
@@ -92,7 +92,7 @@ async.eachSeries(builds, function(a, callback) {
         var base64saucelabscontents = buff.toString('base64');
 
         var testresult = {};
-        testresult.org_name = 'vjegase@us.ibm.com';
+        testresult.org_name = process.env.ORG_NAME;
         testresult.project_name = 'Test-Insights-Tab';
         testresult.environment_name = 'MASTER-BUILD';
         testresult.runtime_name = 'Test-Insights-Tab';
