@@ -25,8 +25,8 @@
       "err": {}
     },
     {
-      "title": "Post - error while searching dictionary",
-      "fullTitle": "builds.js Post build Post - error while searching dictionary",
+      "title": "Post error while searching dictionary",
+      "fullTitle": "Post error while searching dictionary",
       "duration": 1,
       "currentRetry": 0,
       "err": {}
@@ -782,7 +782,15 @@
     }
   ],
   "pending": [],
-  "failures": [],
+  "failures": [
+      {
+      "title": "Post error while searching dictionary",
+      "fullTitle": "Post error while searching dictionary",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
   "passes": [
     {
       "title": "Post - no error",
@@ -795,13 +803,6 @@
       "title": "Post - required field(build_id) missing error",
       "fullTitle": "builds.js Post build Post - required field(build_id) missing error",
       "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "Post - error while searching dictionary",
-      "fullTitle": "builds.js Post build Post - error while searching dictionary",
-      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
